@@ -1,0 +1,15 @@
+<h1>Movie Review</h1>
+
+<div ng-controller = "ReviewController">
+  <ul>
+    <li><img ng-src="{{review.multimedia.src}}" alt="{{review.display_title}} img" /></li>
+    <li>Title: {{review.display_title}}</li>
+    <li>MPAA Rating: {{review.mpaa_rating}}</li>
+    <li>Publication Date: {{review.publication_date}}</li>
+    <li>Critics Pick: {{review.critics_pick}}</li>
+    <li>Headline: {{review.headline}}</li>
+    <li>Review Summary: {{review.summary_short}}</li>
+    <a ui-sref='critic({name: review.byline})'>{{review.byline}}</a>
+    <li>Link to article: {{review.link.url}}</li>
+  <ul>
+</div>

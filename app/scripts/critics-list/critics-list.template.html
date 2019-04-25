@@ -1,0 +1,11 @@
+<h1>Critics</h1>
+
+<div ng-controller = "CriticsListController">
+  <ul>
+    <li ng-repeat="critic in critics">
+      <img ng-src="{{critic.multimedia.resource.src}}"/>
+      Name: {{critic.display_name}}
+      -<a ui-sref='critic({name: critic.display_name})'>Critic</a>
+    </li>
+  </ul>
+</div>
