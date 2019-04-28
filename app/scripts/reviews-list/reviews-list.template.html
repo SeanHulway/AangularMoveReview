@@ -4,10 +4,9 @@
       <select ng-model="mpaaoption" ng-options="key as value for (key, value) in mpaaoptions" placeholder="MPAA Rating"></select>
     <label>Date</label>
       <input ng-model= "date" placeholder="yyyy-mm-dd"/>
-      {{date}}
     <label>Critic Pick</label>
       <input id="criticpick" class="checkbox" type="checkbox" ng-model="criticpick" ng-true-value=1 ng-false-value=0>
-    <label>Display</label>
+    <label>Limit</label>
       <select ng-model="limit" ng-options="limitOptions for limitOptions in limitOptions"></select>
   </div>
 

@@ -12,14 +12,15 @@ reviewsList.controller("ReviewsListController", ['$scope', '$stateParams', 'Revi
   //Pagination at some point?
   $scope.reviews = ReviewService.query();
 
-  $scope.mpaaoptions = {'G':'G', 'PG':'PG', 'PG-13':'PG-13', 'R':'R', '': 'Not Rated'};
+  $scope.mpaaoptions = {'G':'G', 'PG':'PG', 'PG-13':'PG-13', 'R':'R', 'Not Rated': 'Not Rated', '': 'Blank'};
   if($stateParams.mpaa){
     $scope.mpaaoption = $stateParams.mpaa;
   }
+
   if($stateParams.date){
     $scope.date = $stateParams.date;
   }
-  $scope.limitOptions = [10, 20, 30, 40, 50];
+  $scope.limitOptions = [1, 5, 10, 20, 30, 40, 50];
   if($stateParams.limit){
     $scope.limit = parseInt($stateParams.limit);
   }else{
