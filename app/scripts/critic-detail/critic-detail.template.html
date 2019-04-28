@@ -1,10 +1,16 @@
-
+<h1>Critic</h1>
 <div ng-controller = "CriticController">
-  <h1>{{critic.display_name}}</h1>
-  Reviews: {{reviewed.length}}
-  Critic Picks: {{picks}}
+  <div class="critic-name"> {{name}} </div>
+  <span>Reviews: {{reviewed.length}}</span>
+  <span>Critic Picks: {{picks}}</span>
 
-  <img ng-src="{{critic.multimedia.resource.src}}"/>
+  <div class="critic-image">
+    <img ng-src="{{critic.multimedia.resource.src}}"/>
+  </div>
 
-  Bio: {{critic.bio}}
+  <div ng-if="critic.bio" class="critic-bio">
+    {{critic.bio}}
+  </div>
+
+  <a ui-sref='reviews({search: searchParams, mpaa: mpaaParams, limit: limitParams, date: dateParams, criticpick: criticpickParams})' class = "back">Back To Reviews</a>
 </div>

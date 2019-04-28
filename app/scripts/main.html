@@ -1,21 +1,8 @@
 <div>
-  <h1>Movie Reviews</h1>
+  <a ui-sref='critics' class="critics-list-link">Critics List</a>
+  <search-reviews search="search" class="search"></search-reviews>
+  <h1 class="header">Movie Reviews</h1>
+
 </div>
-<div ng-controller = "MusicReviewsListController">
-  <input type="text" ng-model="search.display_title"/>
-  <select ng-model="mpaaoption.mpaa_rating" ng-options="mpaaoption for mpaaoption in mpaaoptions"></select>
-  <select ng-model="limit" ng-options="limitOptions for limitOptions in limitOptions"></select>
-  Critic Pick: <input type="checkbox" ng-model="criticpick.critics_pick" ng-true-value=1 ng-false-value=0>
-
-  <ul>
-    <li ng-repeat="review in reviews | filter:search | filter:mpaaoption:true | filter:criticpick | orderBy:order:reverse | limitTo: limit">
-      <img ng-src="{{review.multimedia.src}}" alt="{{review.display_title}} img" />
-      Title: {{review.display_title}}
-      MPAA Rating: {{review.mpaa_rating}}
-      Publication Date: {{review.publication_date}}
-      Critics Pick: {{review.critics_pick}}
-
-      -<a ui-sref='review({title: review.display_title})'>Review</a>
-    </li>
-  </ul>
+  <reviews-list search="search" class="reviews-list"></reviews-list>
 </div>

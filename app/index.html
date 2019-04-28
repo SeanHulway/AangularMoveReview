@@ -14,7 +14,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="app.css">
         <!-- endbuild -->
     <!-- <base href="/"> -->
 </head>
@@ -28,8 +28,6 @@
       <script src="bower_components/es5-shim/es5-shim.js"></script>
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
-    <a ui-sref='reviews'>Reviews</a>
-    <a ui-sref='critics'>Critics</a>
     <!-- Add your site or application content here -->
     <div class="container" ui-view></div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -58,11 +56,17 @@
         <script src="bower_components/angular-touch/angular-touch.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-ui-mask/dist/mask.js"></script>
+        <script src="bower_components/angular-ui-mask/dist/mask.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="app.js"></script>
         <script src="scripts/review-detail/review-detail.component.js"></script>
+        <script src="scripts/reviews-list/reviews-list.component.js"></script>
+        <script src="scripts/search-reviews/search-reviews.component.js"></script>
+        <script src="scripts/critics-list/critics-list.component.js"></script>
+        <script src="scripts/critic-detail/critic-detail.component.js"></script>
         <script src="services/review-service.js"></script>
         <script src="services/critics-service.js"></script>
         <!-- endbuild -->

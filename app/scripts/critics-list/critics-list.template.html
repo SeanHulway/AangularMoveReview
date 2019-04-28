@@ -1,11 +1,22 @@
+<a ui-sref='reviews' class="critics-list-link">Movie List</a>
 <h1>Critics</h1>
-
 <div ng-controller = "CriticsListController">
-  <ul>
-    <li ng-repeat="critic in critics">
-      <img ng-src="{{critic.multimedia.resource.src}}"/>
-      Name: {{critic.display_name}}
-      -<a ui-sref='critic({name: critic.display_name})'>Critic</a>
-    </li>
-  </ul>
+  <table>
+    <tr>
+      <th>Critics Name</th>
+      <th>Number of Reviews</th>
+      <th>Number of Picks</th>
+      <th>Bio</th>
+      <th>Picture</th>
+    </tr>
+
+    <tr ng-repeat="critic in critics">
+      <td><a ui-sref='critic({name: critic.display_name})' class = 'critic-name'>{{critic.display_name}}</a></td>
+      <td>{{reviewed(critic.display_name)}}</td>
+      <td>{{picked(critic.display_name)}}</td>
+      <td>{{critic.bio}}</td>
+      <td><img ng-src="{{critic.multimedia.resource.src}}"/></td>
+    </tr>
+  </table>
+
 </div>

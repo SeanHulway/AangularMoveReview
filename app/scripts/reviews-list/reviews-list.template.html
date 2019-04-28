@@ -1,0 +1,30 @@
+<div ng-controller = "ReviewsListController">
+  <div class="filters">
+    <label>MPAA Rating</label>
+      <select ng-model="mpaaoption" ng-options="key as value for (key, value) in mpaaoptions" placeholder="MPAA Rating"></select>
+    <label>Date</label>
+      <input ng-model= "date" placeholder="yyyy-mm-dd"/>
+      {{date}}
+    <label>Critic Pick</label>
+      <input id="criticpick" class="checkbox" type="checkbox" ng-model="criticpick" ng-true-value=1 ng-false-value=0>
+    <label>Display</label>
+      <select ng-model="limit" ng-options="limitOptions for limitOptions in limitOptions"></select>
+  </div>
+
+  <div class="reviews"
+    <ul>
+      <li ng-repeat="review in reviews | filter:{display_title: $ctrl.search } | filter:{publication_date: date} | filter:mpaaoption:true | filter:criticpick:true | orderBy:order:reverse | limitTo: limit">
+        <a ui-sref='review({title: review.display_title, search: $ctrl.search, mpaa: mpaaoption, limit: limit, date: date, criticpick: criticpick})'class="movie-title">
+  				{{review.display_title}}
+  			</a>
+        <img ui-sref='review({title: review.display_title, search: $ctrl.search, mpaa: mpaaoption, limit: limit, date: date, criticpick: criticpick})' ng-src="{{review.multimedia.src}}" alt="{{review.display_title}} img" />
+
+        <div class="review-info">
+          <span>{{review.publication_date}}</span>
+          <span ng-if="review.mpaa_rating">Rated: {{review.mpaa_rating}}</span>
+          <span ng-if="review.critics_pick">Critic Picked</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,124 @@
+body {
+  background: #000;
+  color: #e50914;
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container{
+  margin: 4vh;
+}
+
+.header {
+  color: #e50914;
+}
+
+.search {
+  float: right;
+  padding-top: 25px;
+}
+.search-bar {
+  width: 250px;
+}
+
+.critics-list-link {
+  float: right;
+  padding: 33px;
+}
+
+input{
+  margin: 10px;
+  opacity: .6;
+  color: red;
+  padding: 2px 5px;
+  border-radius: 25px;
+}
+.checkbox{
+  height: 15px;
+  width: 15px;
+}
+select{
+  margin: 10px;
+  opacity: .6;
+  color: red;
+  padding: 2px 5px;
+  border-radius: 25px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.reviews-list .reviews {
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+}
+
+.reviews-list .reviews .movie-title{
+  display: block;
+  padding: 0.5rem 0.15rem;
+  background: #000;
+  font-size: 1.5rem;
+}
+.reviews-list .reviews img {
+  width: 100%;
+  border: 3px #000 solid;
+}
+.reviews-list .reviews img:hover {
+  opacity: 0.6;
+  border-color: #e50914;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+.review-list .review-info:hover {
+  cursor: pointer;
+}
+
+.review img{
+  border: 2px #e50914 solid;
+}
+.review .title{
+  display: block;
+  padding: 0.5rem 0.15rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.review .review-info {
+
+}
+.review .review-info ul {
+  display: inline-block;
+  list-style: none;
+}
+
+.critic .critic-name{
+  display: block;
+  padding: 0.5rem 0.15rem 0rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.critic .critic-image img{
+  margin-top: 15px;
+}
+
+.critic .critic-bio {
+  margin-top: 15px;
+}
